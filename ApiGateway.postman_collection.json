@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "130d5809-f743-415a-a507-ad1a58abb4c5",
+		"name": "ApiGateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "productService",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODg1MTUyMTgsImlzcyI6Imh0dHBzOi8vbWVkaXVtLmNvbS9AYmVya2VtcmVjYWJ1ayIsImF1ZCI6IkJlcmsgRW1yZSDDh2FidWsifQ.Vbjt6-lF0uCZiaupG4Ia2Ci9YCEgmtxF2xfZWZJXUDU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5100/product-service/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"product-service",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IdentityService",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5100/identity-service/authentication?userName=user&password=1234",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"identity-service",
+						"authentication"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "user"
+						},
+						{
+							"key": "password",
+							"value": "1234"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userService",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODg1MTUyMTgsImlzcyI6Imh0dHBzOi8vbWVkaXVtLmNvbS9AYmVya2VtcmVjYWJ1ayIsImF1ZCI6IkJlcmsgRW1yZSDDh2FidWsifQ.Vbjt6-lF0uCZiaupG4Ia2Ci9YCEgmtxF2xfZWZJXUDU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5100/user-service/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5100",
+					"path": [
+						"user-service",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
